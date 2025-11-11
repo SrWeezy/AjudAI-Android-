@@ -1,0 +1,34 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:label="HelpDesk UNIP"
+        android:icon="@mipmap/ic_launcher"
+        android:usesCleartextTraffic="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:theme="@style/Theme.Material3.DayNight.NoActionBar">
+
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".CreateTicketActivity" />
+        <activity android:name=".TicketsListActivity" />
+        <activity android:name=".UsersListActivity" />
+        <activity android:name=".ui.AddUserActivity" />
+
+
+
+
+
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <!-- Login é a primeira tela -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".MainActivity" />
+    </application>
+</manifest>
